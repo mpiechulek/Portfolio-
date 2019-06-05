@@ -1,0 +1,30 @@
+.header {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(54, 54, 54, 0.1)),url("../img/img_2.jpg");
+    background-color: #000000;
+    background-repeat: cover;
+    background-position: top;
+    height: 65vh;
+    position: relative;
+    z-index: 2;
+    // @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)){
+    //   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    //   clip-path: polygon(0 0, 0 100%, 15% 100%,  50% 0, 100% 0, 100% 100%); }
+
+    &_container {
+
+        display: inline-block;
+        height: auto;
+        width: auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        text-align: center;
+    }
+}
+
+.heading-prime {
+    color: $color-font-header;
+    font-size: $header-main-fontsize;
+    text-shadow: 3px 3px $color-font-shadow-1;
+}

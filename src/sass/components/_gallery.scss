@@ -1,0 +1,95 @@
+.main_section_gallery {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: auto;
+
+    &_wrap-1 {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        min-width: 620px;
+    }
+
+    &_wrap-2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        min-width: 620px;
+    }
+}
+
+// hexagonal gallery img container
+
+.hex {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+    img {
+        width: 200px;
+        height: 200px;
+        transition: all 0.35s ease-in-out;
+    }
+
+
+    &_overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 1s ease-in-out;
+        background-color: rgba(57, 62, 70, 0.5);
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+        &_text {
+            color: white;
+            font-weight: 600;
+            font-size: 3rem;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        };
+    }
+}
+
+.hex:not(:first-child) {
+    margin-left: 40px;
+}
+
+.hex:hover img {
+    transform: scale(1.2);
+}
+
+.hex_overlay:hover {
+    opacity: 1;
+}
+
+.git {
+    &_icon {
+        position:absolute;
+        width: 15rem;
+        height: 15rem;
+        top: 10%;
+        right: 10%;
+        transition: .6s cubic-bezier(.67,.11,.25,.91);
+    }
+
+    &_icon:hover {
+        transform:scale(1.15);
+
+    }
+}

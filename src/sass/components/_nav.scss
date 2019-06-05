@@ -1,0 +1,40 @@
+@import "../base/variables";
+
+.navigation{
+    position:absolute;
+    display:block;
+    background-color: $second-background;
+    width:auto;
+    height: auto;
+    padding:3rem 5rem;
+    z-index: 20;
+    top: 45rem;
+    right: 15rem;
+
+    &_list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+            a {
+                text-decoration: none;
+                font-size: 3rem;
+                color: $color-font-nav;
+                margin-right: 2rem;
+                border-right: solid 1px  $color-font-nav;
+                padding-right: 2rem;
+            }
+
+            a:last-child {
+                margin-right: 0;
+                border-right: none;
+                padding-right: 0;
+            }
+
+            a:hover {
+                font-weight: 600;
+                transition:  .3s;
+                color:$color-font-header;
+            }
+    }
+}
