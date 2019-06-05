@@ -1,0 +1,19 @@
+
+.scrollBtn {
+
+    background-color:white;
+    bottom: 10rem;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    content:'';
+    cursor: pointer;
+    display: none;
+    height: 5rem;
+    right: 10rem;
+    position: fixed;
+    width: 5rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+
+
+}

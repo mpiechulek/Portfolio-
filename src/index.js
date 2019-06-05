@@ -2,23 +2,21 @@
 import { coLubie } from './js/app.js';
 import './sass/main.scss';
 
+// Scroll back button efect
+const btn = document.querySelector('.scrollBtn');
 
+window.addEventListener('scroll', () => {
 
-
-window.onscroll = function() {
-    scrollFunction();
-};
-
-const scrollFunction = () => {
     if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-        document.getElementById("scrollBtn").style.display = "block";
+        btn.style.display = "block";
     } else {
-        document.getElementById("scrollBtn").style.display = "none";
+        btn.style.display = "none";
     }
-};
+});
 
 // When the user clicks on the button, scroll to the top of the document
-const topFunction = () => {
+
+btn.addEventListener("click", () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-};
+});

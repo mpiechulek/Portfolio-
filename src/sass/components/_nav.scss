@@ -6,9 +6,9 @@
     background-color: $second-background;
     width:auto;
     height: auto;
-    padding:3rem 5rem;
+    padding:2rem 3rem;
     z-index: 20;
-    top: 45rem;
+    top: 47rem;
     right: 15rem;
 
     &_list{
@@ -18,7 +18,7 @@
 
             a {
                 text-decoration: none;
-                font-size: 3rem;
+                font-size: 2rem;
                 color: $color-font-nav;
                 margin-right: 2rem;
                 border-right: solid 1px  $color-font-nav;
