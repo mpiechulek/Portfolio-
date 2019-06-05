@@ -1,7 +1,6 @@
 
 .scrollBtn {
-
-    background-color:white;
+    background-color:$third-background;
     bottom: 10rem;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     content:'';
@@ -11,9 +10,9 @@
     right: 10rem;
     position: fixed;
     width: 5rem;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 600;
+    transition: 0.5s;
 
-
+    &:hover {
+        background-color:$second-background;
+    }
 }
