@@ -12,7 +12,8 @@
         display: inline-block;
         font-size: 2rem;
         height:5rem;
-        min-width:30rem;
+        padding: 0 2rem;
+        min-width: inherit30rem;
     }
 
     &_wrap {
@@ -24,9 +25,11 @@
 }
 
 textarea {
+    font-size: 2rem;
+    height: 30rem;
     margin-right: 3rem;
     min-width: 35rem;
-    height: 30rem;
+    padding: 1rem;
 }
 
 label {

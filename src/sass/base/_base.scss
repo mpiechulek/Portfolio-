@@ -3,7 +3,7 @@
 
 body {
     background-color: $main-background;
-        background-repeat: repeat;
+    background-repeat: repeat;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -25,9 +25,15 @@ html {
     scroll-behavior: smooth;
 
     @include respond(big-desktop) {
-        // width < 1800px ? 1rem = 9px, 9/16 = 56.25%
+        // width < 1800px ? 1rem = 12px, 11/16 = 75%%
         font-size: 75%;
     }
+
+    @include respond(medium-desktop) {
+        // width < 1800px ? 1rem = 10px, 9/16 = 62.5%%
+        font-size: 62.5%;
+    }
+
     @include respond(tab-land) {
         // width < 1200px ? 1rem = 9px, 9/16 = 56.25%
         font-size: 56.25%;

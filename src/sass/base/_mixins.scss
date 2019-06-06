@@ -1,3 +1,5 @@
+
+// clearing floats
 @mixin clearfix {
     &::after {
         content: "";
@@ -5,6 +7,8 @@
         clear: both;
     }
 }
+
+// centering containers
 @mixin absCenetr {
     position: absolute;
     top: 50%;
@@ -17,7 +21,8 @@
 0 - 600px : Phone
 600 - 900px : Tablet portrait
 900 - 1200px : Tablet landscape
-[1200 -1800] : normal styles apply
+[1200 -1600] : normal styles apply
+[1600 - 1800]: medium desktop
 1800px + : Big desktop
 
 $breakpoint argument choice:
@@ -45,6 +50,11 @@ $breakpoint argument choice:
         @media only screen and (max-width: 75em) {
             @content
         }; // 1200px
+    }
+    @if $breakpoint == medium-desktop {
+        @media only screen and (max-width: 100em) {
+            @content
+        }; // 1600px
     }
     @if $breakpoint == big-desktop {
         @media only screen and (min-width: 112.5em) {

@@ -3,22 +3,35 @@
     background-color: #000000;
     background-repeat: cover;
     background-position: top;
-    height: 65vh;
+    height: 90vh;
     position: relative;
     z-index: 2;
-    // @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)){
-    //   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-    //   clip-path: polygon(0 0, 0 100%, 15% 100%,  50% 0, 100% 0, 100% 100%); }
+
+
+    @include respond(medium-desktop){
+        height: 80vh;
+    }
+
+    @include respond(medium-desktop){
+        height: 75vh;
+    }
+
+    @include respond(tab-land){
+        height: 60vh;
+    }
+
+    @include respond(tab-port){
+        height: 55vh;
+    }
+
+    @include respond(phone){
+        height: 45vh;
+    }
 
     &_container {
-
-        display: inline-block;
         height: auto;
         width: auto;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        position: absolute;
+        @include absCenetr();
         text-align: center;
     }
 }
@@ -27,4 +40,18 @@
     color: $color-font-header;
     font-size: $header-main-fontsize;
     text-shadow: 3px 3px $color-font-shadow-1;
+
+    @include respond(tab-land){
+        font-size: 5rem;
+    }
+
+    @include respond(tab-port){
+        font-size: 3.5rem;
+    }
+
+    @include respond(phone){
+        font-size: 3rem;
+    }
+
+
 }
