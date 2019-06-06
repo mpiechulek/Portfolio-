@@ -12,6 +12,14 @@
     width: 5rem;
     transition: 0.5s;
 
+    @include respond(tab-port){
+         right: 6rem;
+    }
+
+    @include respond(phone){
+         right: 3rem;
+    }
+
     &:hover {
         background-color:$second-background;
     }

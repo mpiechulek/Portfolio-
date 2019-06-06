@@ -1,24 +1,28 @@
-.main_section_gallery {
+.gallery {
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    width: 800px;
+    width: auto;
     height: auto;
 
     &_wrap-1 {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: row;
-        min-width: 620px;
+        display: inline-block;
+        float:left;
+        height: auto;
+        margin-left: 3rem;
+        width:auto;
+
     }
 
     &_wrap-2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        min-width: 620px;
+        display: inline-block;
+        float:left;
+        margin-top: 16rem;
+        width:auto;
+        height: auto;
     }
+
+    
 }
+
 
 // hexagonal gallery img container
 
@@ -26,23 +30,19 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    width: 200px;
-    height: 200px;
+    margin: 0  -7.5rem 12rem 0 ;
+    width: 20rem;
+    height: 20rem;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
     img {
-        width: 200px;
-        height: 200px;
+        width: 20rem;
+        height: 20rem;;
         transition: all 0.35s ease-in-out;
     }
 
-
     &_overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        @include absCenetr()
         height: 100%;
         width: 100%;
         opacity: 0;
@@ -54,10 +54,7 @@
             color: white;
             font-weight: 600;
             font-size: 3rem;
-
-            position: absolute;
-            top: 50%;
-            left: 50%;
+            @include absCenetr()
             -webkit-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -66,9 +63,9 @@
     }
 }
 
-.hex:not(:first-child) {
-    margin-left: 40px;
-}
+// .hex:not(:first-child) {
+//     margin-left: 40px;
+// }
 
 .hex:hover img {
     transform: scale(1.2);
@@ -79,17 +76,18 @@
 }
 
 .git {
+    position:absolute;
+    top:37rem;
+    left: 20rem;
+
+
     &_icon {
-        position:absolute;
         width: 10rem;
         height: 10rem;
-        bottom: 15%;
-        left: 15%;
         transition: .6s cubic-bezier(.67,.11,.25,.91);
     }
 
     &_icon:hover {
         transform:scale(1.15);
-
     }
 }

@@ -1,7 +1,8 @@
 .header {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(54, 54, 54, 0.1)),url("../img/img_2.jpg");
     background-color: #000000;
-    background-repeat: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: top;
     height: 90vh;
     position: relative;
@@ -27,6 +28,8 @@
     @include respond(phone){
         height: 45vh;
     }
+
+
 
     &_container {
         height: auto;

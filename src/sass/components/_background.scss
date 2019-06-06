@@ -20,6 +20,14 @@
   color: white;
   text-align: center;
   display: table;
+
+  @include respond(tab-port){
+       height: 50vh;
+  }
+
+  @include respond(phone){
+       height: 40vh;
+  }
 }
 
 .scroll-bg {
@@ -27,4 +35,20 @@
   padding: 5rem 30rem;
   text-align: justify;
   color: #676767;
+
+  @include respond(medium-desktop){
+       padding: 4.5rem 25rem;
+  }
+
+  @include respond(tab-land){
+       padding: 4rem 20rem;
+  }
+
+  @include respond(tab-port){
+       padding: 4rem 15rem;
+  }
+
+  @include respond(phone){
+       padding: 4rem 8rem;
+  }
 }

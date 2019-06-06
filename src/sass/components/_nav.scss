@@ -10,14 +10,14 @@
     padding:2rem 3rem;
     z-index: 20;
     bottom: 18%;
-    right: 15rem;
+    // right: 15rem;
 
     @include respond(medium-desktop){
         bottom: 15%;
     }
 
     @include respond(tab-land){
-        bottom: 12%;
+    bottom: 12%;
     }
 
     &_list{

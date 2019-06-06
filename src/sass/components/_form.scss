@@ -5,6 +5,10 @@
     width: auto;
     height: auto;
 
+    @include respond(tab-port){
+         flex-direction: column;
+    }
+
     &_input {
         background-color: white;
         border: 2px solid $color-font-text;
@@ -27,8 +31,10 @@
 textarea {
     font-size: 2rem;
     height: 30rem;
+    width:100%;
     margin-right: 3rem;
     min-width: 35rem;
+    display: block;
     padding: 1rem;
 }
 
@@ -38,6 +44,9 @@ label {
     margin-right: 3rem;
     width:15rem;
 
+    @include respond(phone){
+         width: 12rem;
+     }
 }
 
 .btn {
