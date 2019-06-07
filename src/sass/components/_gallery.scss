@@ -9,7 +9,6 @@
         height: auto;
         margin-left: 3rem;
         width:auto;
-
     }
 
     &_wrap-2 {
@@ -19,67 +18,78 @@
         width:auto;
         height: auto;
     }
-
-    
 }
-
 
 // hexagonal gallery img container
 
+
 .hex {
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    margin: 0  -7.5rem 12rem 0 ;
-    width: 20rem;
-    height: 20rem;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-
-    img {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin: 0  -7.5rem 12rem 0 ;
         width: 20rem;
-        height: 20rem;;
-        transition: all 0.35s ease-in-out;
-    }
-
-    &_overlay {
-        @include absCenetr()
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: 1s ease-in-out;
-        background-color: rgba(57, 62, 70, 0.5);
+        height: 20rem;
         clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
-        &_text {
-            color: white;
-            font-weight: 600;
-            font-size: 3rem;
+        img {
+            width: 20rem;
+            height: 20rem;;
+            transition: all 0.35s ease-in-out;
+
+            @include respond(tab-land){
+                width: 20rem;
+                height: 20rem;;
+            }
+        }
+
+
+        &_overlay {
             @include absCenetr()
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            text-align: center;
-        };
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: 1s ease-in-out;
+            background-color: rgba(57, 62, 70, 0.5);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+            @include respond(tab-land){
+                opacity: 1;
+            }
+
+            &_text {
+                color: white;
+                font-weight: 600;
+                font-size: 3rem;
+                @include absCenetr()
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
+
+                @include respond(tab-land){
+                    font-size: 2rem;
+                }
+        }
+    }
+}
+@include respond(no-hover){
+    .hex:hover img {
+        transform: scale(1.2);
     }
 }
 
-// .hex:not(:first-child) {
-//     margin-left: 40px;
-// }
-
-.hex:hover img {
-    transform: scale(1.2);
-}
-
-.hex_overlay:hover {
-    opacity: 1;
-}
+@include respond(no-hover){
+    .hex_overlay:hover {
+        opacity: 1;
+        }
+    }
 
 .git {
     position:absolute;
     top:37rem;
     left: 20rem;
-
 
     &_icon {
         width: 10rem;
@@ -87,7 +97,9 @@
         transition: .6s cubic-bezier(.67,.11,.25,.91);
     }
 
-    &_icon:hover {
-        transform:scale(1.15);
+    @include respond(no-hover){
+        &_icon:hover {
+            transform:scale(1.15);
+        }
     }
 }

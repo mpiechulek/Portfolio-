@@ -1,16 +1,10 @@
-.main {
-    height: 100%;
-    &_section{
-        position: relative;
-    }
-}
 
 .heading-second{
     color: $color-font-header;
     font-size: $header-section-fontsize;
     font-weight: 300;
     text-decoration: underline;
-    margin-bottom: $margin-large;
+    margin-bottom: $margin-medium;
 }
 
 .paragraph {

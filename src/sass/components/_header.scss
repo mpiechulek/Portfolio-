@@ -4,36 +4,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-    height: 90vh;
+    height: 85vh;
     position: relative;
     z-index: 2;
 
-
-    @include respond(medium-desktop){
-        height: 80vh;
-    }
-
-    @include respond(medium-desktop){
-        height: 75vh;
-    }
-
-    @include respond(tab-land){
-        height: 60vh;
-    }
-
-    @include respond(tab-port){
-        height: 55vh;
-    }
-
-    @include respond(phone){
-        height: 45vh;
-    }
-
-
-
     &_container {
         height: auto;
-        width: auto;
+        width: 100%;
         @include absCenetr();
         text-align: center;
     }
@@ -43,6 +20,8 @@
     color: $color-font-header;
     font-size: $header-main-fontsize;
     text-shadow: 3px 3px $color-font-shadow-1;
+    width:100%;
+    display: inline-block;
 
     @include respond(tab-land){
         font-size: 5rem;
@@ -50,10 +29,6 @@
 
     @include respond(tab-port){
         font-size: 3.5rem;
-    }
-
-    @include respond(phone){
-        font-size: 3rem;
     }
 
 

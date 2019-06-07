@@ -17,12 +17,12 @@
 }
 // MEDIA QUERY MANAGER
 /*
-
-0 - 600px : Phone
+300px : Small-Phone
+300px - 600px : Phone
 600 - 900px : Tablet portrait
 900 - 1200px : Tablet landscape
-[1200 -1600] : normal styles apply
-[1600 - 1800]: medium desktop
+[1200 -1600] : Normal styles apply
+[1600 - 1800]: Medium desktop
 1800px + : Big desktop
 
 $breakpoint argument choice:
@@ -35,6 +35,14 @@ $breakpoint argument choice:
 
 */
 @mixin respond($breakpoint) {
+
+    @if $breakpoint == small-phone {
+        @media only screen and (max-width: 28.125em) {
+            @content
+        };
+        // 450px
+    }
+
     @if $breakpoint == phone {
         @media only screen and (max-width: 37.5em) {
             @content
@@ -60,5 +68,12 @@ $breakpoint argument choice:
         @media only screen and (min-width: 112.5em) {
             @content
         }; // 1800px
+    }
+    
+    //disabling hover efect
+    @if $breakpoint == no-hover {
+        @media only screen and (min-width: 90em) {
+            @content
+        }; // 1440px
     }
 }

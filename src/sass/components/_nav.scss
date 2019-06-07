@@ -9,16 +9,9 @@
     height: auto;
     padding:2rem 3rem;
     z-index: 20;
-    bottom: 18%;
+    bottom: 12%;
     // right: 15rem;
 
-    @include respond(medium-desktop){
-        bottom: 15%;
-    }
-
-    @include respond(tab-land){
-    bottom: 12%;
-    }
 
     &_list{
         display: flex;
@@ -44,6 +37,10 @@
                 font-weight: 600;
                 transition:  .3s;
                 color:$color-font-header;
+
+                @include respond(tab-port){
+                    hover: none;
+                }
             }
     }
 }

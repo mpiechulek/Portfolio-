@@ -20,7 +20,10 @@
          right: 3rem;
     }
 
-    &:hover {
+    @include respond(no-hover){
+        &:hover {
         background-color:$second-background;
+        }
     }
+
 }

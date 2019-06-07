@@ -60,9 +60,11 @@ label {
     text-align: center;
     transition: 0.5s ease-in-out;
     width:15rem;
-}
 
-.btn:hover {
-    background-color:$second-background;
-    color: white;
+    @include respond(no-hover){
+        &:hover {
+        background-color:$second-background;
+        color: white;
+        }
+    }
 }
