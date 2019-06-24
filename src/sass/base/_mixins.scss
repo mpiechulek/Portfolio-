@@ -17,8 +17,8 @@
 }
 // MEDIA QUERY MANAGER
 /*
-300px : Small-Phone
-300px - 600px : Phone
+450px : Small-Phone
+450x - 600px : Phone
 600 - 900px : Tablet portrait
 900 - 1200px : Tablet landscape
 [1200 -1600] : Normal styles apply
@@ -69,7 +69,7 @@ $breakpoint argument choice:
             @content
         }; // 1800px
     }
-    
+
     //disabling hover efect
     @if $breakpoint == no-hover {
         @media only screen and (min-width: 90em) {

@@ -4,38 +4,111 @@
     height: auto;
 
     &_wrap-1 {
-        display: inline-block;
-        float:left;
-        height: auto;
-        margin-left: 3rem;
-        width:auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        justify-items: start;
+        align-items: center;
+        grid-row-gap: 1rem;
+        grid-column-gap: 1rem;
+
+        @include respond(tab-port){
+            justify-items: center;
+            grid-template-columns: repeat(2, 1fr);   
+        }
     }
 
-    &_wrap-2 {
-        display: inline-block;
-        float:left;
-        margin-top: 16rem;
-        width:auto;
-        height: auto;
+    .par-hidden {
+       @include respond(tab-port){
+           display:none;
+       }
+    }
+
+
+    .grid-1{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .grid-2{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    .grid-3{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .grid-4{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+    .grid-5{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .grid-6{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .grid-7{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .grid-8{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+    .grid-9{
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .grid-10{
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 2;
+        grid-column-end: 3;
     }
 }
 
 // hexagonal gallery img container
-
 
 .hex {
         cursor: pointer;
         display: block;
         position: relative;
         overflow: hidden;
-        margin: 0  -7.5rem 12rem 0 ;
         width: 20rem;
         height: 20rem;
         clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
         img {
             width: 20rem;
-            height: 20rem;;
+            height: 20rem;
             transition: all 0.35s ease-in-out;
 
             @include respond(tab-land){
@@ -43,7 +116,6 @@
                 height: 20rem;;
             }
         }
-
 
         &_overlay {
             @include absCenetr()
@@ -60,7 +132,7 @@
 
             &_text {
                 color: white;
-                font-weight: 600;
+                font-weight: 400;
                 font-size: 3rem;
                 @include absCenetr()
                 -webkit-transform: translate(-50%, -50%);
@@ -86,15 +158,23 @@
         }
     }
 
+
+.mywork-heading {
+    display:flex;
+    justify-content: space-between;
+
+
+}
+
 .git {
-    position:absolute;
-    top:37rem;
-    left: 20rem;
 
     &_icon {
         width: 10rem;
         height: 10rem;
         transition: .6s cubic-bezier(.67,.11,.25,.91);
+        &:hover{
+            transform:scale(1.15);
+        }
     }
 
     @include respond(no-hover){
