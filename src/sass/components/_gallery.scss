@@ -14,7 +14,7 @@
 
         @include respond(tab-port){
             justify-items: center;
-            grid-template-columns: repeat(2, 1fr);   
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
@@ -23,7 +23,6 @@
            display:none;
        }
     }
-
 
     .grid-1{
         grid-row-start: 1;
@@ -36,7 +35,7 @@
         grid-row-start: 1;
         grid-row-end: 2;
         grid-column-start: 2;
-        grid-column-end: 4;
+        grid-column-end: 3;
     }
     .grid-3{
         grid-row-start: 2;
@@ -106,14 +105,19 @@
         height: 20rem;
         clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
+        @include respond(phone){
+            width: 15rem;
+            height: 15rem;
+        }
+
         img {
             width: 20rem;
             height: 20rem;
             transition: all 0.35s ease-in-out;
 
-            @include respond(tab-land){
-                width: 20rem;
-                height: 20rem;;
+            @include respond(phone){
+                width: 15rem;
+                height: 15rem;
             }
         }
 
